@@ -1,6 +1,6 @@
 <?php
 
-    $connection = mysqli_connect('localhost','root','#Hella2814','book_db');
+    $connection = mysqli_connect('localhost','root','','book_db');
     if(isset($_POST['send'])){
         $name = $_POST['name'];
         $email = $_POST['email'];
@@ -17,7 +17,7 @@
             mysqli_query($connection, $request);
             header('location:book.php');
     }else {
-        echo "Ocorreu Um problema! tente de novo ou comunique a administrador do site";
+        echo "Ocorreu um problema! tente de novo ou comunique a administrador do site";
     }
     
 ?>
